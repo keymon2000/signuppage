@@ -34,14 +34,14 @@ app.post("/", function (req, res) {
     var url="https://us18.api.mailchimp.com/3.0/lists/0727d7e72a"
     const options={
         method:"POST",
-        auth: "tushar1:6ca9deeee229f53abf9c9b592ad6929-us18"
+        auth: "tushar1:c0ec6ede24bb27a0620470a19363ce88-us18"
     }
     const request=https.request(url, options, function (response) {
      
         if(response.statusCode===200){
-            res.sendfile(__dirname+"/success.html");
+            res.sendFile(__dirname+"/success.html");
         }else{
-            res.sendfile(__dirname+"/failure.html");
+            res.sendFile(__dirname+"/failure.html");
         }
         
         response.on("data",function(data){
